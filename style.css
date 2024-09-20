@@ -31,6 +31,7 @@
   padding-left: 40px; /* Add padding for spacing */
   color: white;
   text-align: left; /* Align text left */
+  user-select: none;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -43,6 +44,16 @@
 .overlay p {
   font-size: 1rem;
   margin-left: 2rem;
+}
+
+/* Ensure links look like normal text */
+.overlay a {
+  color: inherit; /* Inherit the text color (so it doesn't look like a traditional blue link) */
+  text-decoration: none; /* Remove underline */
+}
+
+.overlay a:hover {
+  cursor: pointer; /* Change cursor to pointer (hand) on hover */
 }
 
 .links {
