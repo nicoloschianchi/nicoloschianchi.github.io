@@ -1,27 +1,34 @@
-/* Make the video cover the entire background */
-#bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1; /* Behind the overlay */
+/* Container for the landing section */
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full screen height for the landing section */
+  overflow: hidden; /* Ensures the video doesn't overflow */
 }
 
-/* Style the overlay content */
-.overlay {
-  position: fixed;
+/* Make the video cover the entire background */
+#bg-video {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Ensures the entire video is shown without cropping */
+  object-position: center;
+  background-color: black; /* Adds a black background if there are empty spaces */
+  z-index: -1;
+}
+
+/* Overlay content for video section */
+.overlay {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5); /* Optional, for text readability */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
 }
 
 .overlay h1 {
@@ -54,29 +61,30 @@
   color: black;
 }
 
-/* Projects Page Styles */
-header {
+/* About Me Section */
+.about-me {
+  padding: 80px 20px; /* Add padding for breathing room */
+  background-color: #f4f4f4; /* Contrast background for the section */
+  color: #333; /* Darker text color for readability */
   text-align: center;
-  padding: 20px;
+  margin-top: 0; /* Ensure it appears below the video section */
 }
 
-.projects {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.projects article {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;
+.about-me h2 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.projects a {
-  color: #007bff;
-  text-decoration: none;
+.about-me p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-.projects a:hover {
-  text-decoration: underline;
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
