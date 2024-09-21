@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   function typeWriter() {
     if (i==-1) {
-      setTimeout(typeWriter, 250);
+      setTimeout(typeWriter, 200);
       i++
     } else if (i == text.indexOf("!")+1) {
       setTimeout(typeWriter, 1000); // Adjust the typing speed here
       typingText.textContent += text.charAt(i);
       i++;
     } else if (i < text.length) {
-      setTimeout(typeWriter, 150); // Adjust the typing speed here
+      setTimeout(typeWriter, 125); // Adjust the typing speed here
       typingText.textContent += text.charAt(i);
       i++;
     } else {
