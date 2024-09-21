@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicolo's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
 
         <!-- Overlay Content -->
         <div class="overlay">
-            <h1>Hi! I'm Nicolo</h1>
+            <h1 id="typing-text"></h1>
             <p>
               CS <a href="https://www.virginia.edu" target="_blank">@UVA</a>
             </p>
@@ -27,14 +28,14 @@
               Researcher <a href="https://autonomousracing.dev/" target="_blank">@Cavalier Autonomous Racing</a>
             </p>
             <div class="links">
-                <a href="https://github.com/nicoloschianchi" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/nicolo-schianchi" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com/nicolo.schianchi/" target="_blank">
-                  <i class="fab fa-instagram"></i>
+              <a href="https://github.com/nicoloschianchi" target="_blank">
+                  <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/nicolo-schianchi" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://instagram.com/nicolo.schianchi/" target="_blank">
+                <i class="fab fa-instagram"></i>
               </a>
             </div>
         </div>
@@ -42,8 +43,16 @@
 
     <!-- About Me Section -->
     <section class="about-me">
-        <h2>About Me</h2>
-        <p>I'm a passionate computer science student with a love for building impactful projects...</p>
+      <h2>About Me</h2>
+      <div class="about-me-content">
+        <img src="images/Lumatic_Headshot.jpg" alt="Nicolo Schianchi" class="about-me-photo">
+        <div class="about-me-text">
+          <p>Hi, I'm Nicolo! I'm a passionate Computer Science student at the University of Virginia, currently working as a researcher at Cavalier Autonomous Racing. I love solving real-world problems through technology, and I’m particularly interested in autonomous systems, AI, and software engineering. Outside of academics, I enjoy participating in hackathons, working on personal projects, and exploring the latest advancements in the field of robotics.</p>
+          <p>Feel free to check out my work or connect with me on LinkedIn and GitHub!</p>
+        </div>
+      </div>
     </section>
+
+    <script src="typingAnimation.js"></script>
 </body>
 </html>

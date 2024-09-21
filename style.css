@@ -1,12 +1,45 @@
-/* Container for the landing section */
 .landing {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full screen height for the landing section */
-  overflow: hidden; /* Ensures the video doesn't overflow */
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Make the video cover the entire background */
+/* Typing animation styles */
+#typing-text {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Caret */
+#typing-text::after {
+  content: '';
+  position: absolute;
+  right: -27.5px; /* Horizontal alignment */
+  top: 17.5%; /* Vertical alignment */
+  height: 65%;
+  width: 25px;
+  background-color: white;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from, to { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+#typing-text.finished::after {
+  display: none;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: auto }
+}
+
 #bg-video {
   position: absolute;
   top: 0;
@@ -15,7 +48,7 @@
   height: 100vh;
   object-fit: cover;
   object-position: center;
-  background-color: black; /* Adds a black background if there are empty spaces */
+  background-color: black;
   z-index: -1;
 }
 
@@ -23,7 +56,6 @@ body {
   font-family: 'DM Sans', sans-serif;
 }
 
-/* Overlay content for video section */
 .overlay {
   position: relative;
   height: 100%;
@@ -31,10 +63,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: flex-start; /* Align content to the left */
-  padding-left: 40px; /* Add padding for spacing */
+  align-items: flex-start;
+  padding-left: 40px;
   color: white;
-  text-align: left; /* Align text left */
+  text-align: left;
   user-select: none;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -50,14 +82,13 @@ body {
   margin-left: 2rem;
 }
 
-/* Ensure links look like normal text */
 .overlay a {
-  color: inherit; /* Inherit the text color (so it doesn't look like a traditional blue link) */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  text-decoration: none;
 }
 
 .overlay a:hover {
-  cursor: pointer; /* Change cursor to pointer (hand) on hover */
+  cursor: pointer;
 }
 
 .links {
@@ -65,7 +96,6 @@ body {
   margin-left: 2rem;
 }
 
-/* Links (GitHub and LinkedIn icons) */
 .links a {
   font-size: 1.3rem;
   color: white;
@@ -81,7 +111,6 @@ body {
   color: #0077b5; /* LinkedIn hover color */
 }
 
-/* Instagram icon with smooth transition from white to gradient */
 .links a:nth-child(3) {
   color: white;
   background: white;
@@ -92,7 +121,7 @@ body {
 
 .links a:nth-child(3):hover {
   color: transparent;
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram hover color */
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -111,9 +140,29 @@ body {
   margin-bottom: 20px;
 }
 
+.about-me-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.about-me-photo {
+  width: 150px;
+  height: 150px;
+  object-position: top;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  max-width: 100%;
+}
+
+.about-me-text {
+  flex: 1;
+  text-align: left;
+}
+
 .about-me p {
-  max-width: 800px;
-  margin: 0 auto;
   font-size: 1.2rem;
   line-height: 1.6;
 }
@@ -124,6 +173,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 /* 
 ::-webkit-scrollbar {
   width: 12px;
