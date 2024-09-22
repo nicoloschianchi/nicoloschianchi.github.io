@@ -15,7 +15,7 @@
     <section class="landing">
         <!-- Background Video -->
         <video autoplay loop muted id="bg-video">
-            <source src="video/CAR_vid.mp4" type="video/mp4">
+            <source src="videos/CAR_vid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -53,7 +53,7 @@
             <img src="images/CAR_logo.jpg" alt="Cavalier Autonomous Racing Logo" class="company-logo">
             <div class="header-content">
               <div class="top-row">
-                <h3>Cavalier Autonomous Racing Team</h3>
+                <h3>Cavalier Autonomous Racing</h3>
                 <span class="dates">March 2024 - Present</span>
               </div>
               <p class="position">Researcher | Motion Planning & Perception Teams</p>
@@ -62,16 +62,28 @@
                 <span>Python</span>
                 <span>ROS 2</span>
                 <span>Docker</span>
+                <span>CI/CD</span>
               </div>
             </div>
           </div>
           <div class="bento-expand">
-            <ul>
-              <li>Engineered perception and motion planning software for Indy Autonomous Challenge, achieving stable localization at 184.6 mph.</li>
-              <li>Analyzed Continental ARS 540 4D RaDAR data in Python with Matplotlib to identify key characteristics in point cloud and filter reflected points.</li>
-              <li>Developed novel C++ clustering algorithm for 4D RaDAR data obtaining consistent detections within 130 meters of ego vehicle at 20 Hz with <0.5m of lateral error.</li>
-              <li>Tuned sensor fusion pipeline feeding into extended Kalman filter for stable opponent tracking at 100 Hz.</li>
-            </ul>
+            <div class="bento-content">
+              <ul class="bullet-points">
+                <li>Engineered perception and motion planning software for Indy Autonomous Challenge, achieving stable localization at 184.6 mph.</li>
+                <li>Analyzed Continental ARS 540 4D RaDAR data using Python to identify key characteristics in point cloud and filter reflections.</li>
+                <li>Developed novel C++ clustering algorithm for 4D RaDAR data obtaining consistent detections within 130 meters of ego vehicle at 20 Hz with &lt0.5m of lateral error.</li>
+                <li>Tuned sensor fusion pipeline feeding into extended Kalman filter for stable opponent tracking at 100 Hz.</li>
+                <li>Collaborated to develop race scenarios for closed-loop testing of C++ spatiotemporal graph motion planner, identifying and fixing 3 critical safety bugs</li>
+              </ul>
+              <div class="bento-video">
+                <video autoplay loop muted>
+                  <source src="videos/Tracking_vid1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <p class="video-title">Opponent Tracking at IMS</p>
+                <p class="video-subtitle">Showing opponent EKF output (purple arrow) and planned trajectory (white points) overlayed on raw RaDAR point cloud</p>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -94,9 +106,13 @@
               </div>
             </div>
             <div class="bento-expand">
-              <ul>
-                <li>TODO: Write</li>
-              </ul>
+              <div class="bento-content">
+                <ul class="bullet-points">
+                  <li>Offered one-on-one support during lab and office hours by applying Socratic method to help students learn about C programming, Bash, git, logic gates, registers, and memory management</li>
+                  <li>Raised exam scores of students I worked with by 4% through targeted support on specific learning objectives</li>
+                  <li>Provided mediation between students and professor on platforms like Piazza, Discord, and Jira, ensuring smooth communication despite the 500:1 student-professor ratio</li>
+                </ul>
+              </div>
             </div>
           </div>
         
@@ -121,9 +137,14 @@
               </div>
             </div>
             <div class="bento-expand">
-              <ul>
-                <li>TODO: Write</li>
-              </ul>
+              <div class="bento-content">
+                <ul class="bullet-points">
+                  <li>Implemented C++ finite state machine acting as battery management system of electric race car, from start-up to shut-off</li>
+                  <li>Conducted integration testing of battery management system, ensuring reliability</li>
+                  <li>Cooperated to implement car's telemetry system using Protobuf, enabling real-time data visualization in the pits and achieving data transfer speeds of up to 300 Mbps</li>
+                  <li>Developing racing simulator that uses bicycle model to optimize race car design. Aiming to enhance vehicle performance and handling</li>
+                </ul>
+              </div>
             </div>
           </div>
         
@@ -149,9 +170,19 @@
               </div>
             </div>
             <div class="bento-expand">
-              <ul>
-                <li>TODO: Write</li>
-              </ul>
+              <div class="bento-content">
+                <ul class="bullet-points">
+                  <li>Enhanced internal management software using React.JS and Node.JS with a MySQL database, improving operational throughput by 2% through a 5% reduction in user errors</li>
+                  <li>Cooperated and communicated directly with company's software lead and the COO in agile environment for efficient, productive workflow</li>
+                  <li>Expedited billing verification processes by building AI software for intelligent document processing using optical character recognition in TypeScript, reducing billing verification time from 10 to 4 minutes</li>
+                </ul>
+                <!-- <div class="bento-video">
+                  <video autoplay loop muted>
+                    <source src="videos/Demo - Made with Clipchamp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div> -->
+              </div>
             </div>
           </div>
       </div>

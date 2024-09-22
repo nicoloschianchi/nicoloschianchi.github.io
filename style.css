@@ -146,7 +146,7 @@ body {
 
 .bento-item {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 2.5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 20px;
@@ -214,30 +214,69 @@ body {
 .bento-expand {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 0.5s ease;
 }
 
 .bento-item:hover .bento-expand {
-  max-height: 500px; /* Adjust this value based on your content */
+  max-height: 800px;
 }
 
-.bento-expand ul {
+.bento-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.bullet-points {
+  flex: 1;
+  min-width: 400px;
   list-style-type: none;
-  padding: 0 20px 20px;
+  padding: 0;
 }
 
-.bento-expand li {
+.bullet-points li {
   font-size: 0.9rem;
   margin-bottom: 10px;
   position: relative;
   padding-left: 20px;
+  padding-right: 30px;
+  margin-left: 80px;
 }
 
-.bento-expand li::before {
+.bullet-points li::before {
   content: "•";
   position: absolute;
   left: 0;
   color: #0077b5;
+}
+
+.bento-video {
+  flex: 1;
+  min-width: 400px;
+  padding-right: 20px;
+}
+
+.bento-video video {
+  width: 100%;
+  max-width: 768;
+  height: auto;
+  border-radius: 1%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .bento-content {
+    flex-direction: column;
+  }
+
+  .bento-video {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .bullet-points li {
+    margin-left: 25px;
+  }
 }
 
 /* Responsive design */
@@ -264,6 +303,14 @@ body {
   .skills {
     justify-content: center;
   }
+}
+
+.video-title {
+  font-size: 0.7rem;
+}
+
+.video-subtitle {
+  font-size: 0.6rem;
 }
 
 /* About Me Section */
