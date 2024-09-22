@@ -92,12 +92,12 @@ body {
 }
 
 .links {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
   margin-left: 2rem;
 }
 
 .links a {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: white;
   margin-right: 10px;
   transition: color 0.3s, background-color 0.3s;
@@ -108,10 +108,14 @@ body {
 }
 
 .links a:nth-child(2):hover {
+  color: #fc6d26; /* GitLab hover color */
+}
+
+.links a:nth-child(3):hover {
   color: #0077b5; /* LinkedIn hover color */
 }
 
-.links a:nth-child(3) {
+.links a:nth-child(4) {
   color: white;
   background: white;
   -webkit-background-clip: text;
@@ -119,7 +123,7 @@ body {
   transition: color 0.3s ease;
 }
 
-.links a:nth-child(3):hover {
+.links a:nth-child(4):hover {
   color: transparent;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Instagram hover color */
   -webkit-background-clip: text;
