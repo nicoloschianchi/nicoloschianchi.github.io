@@ -220,6 +220,34 @@
       </div>
     </section>
 
-    <script src="typingAnimation.js"></script>
+    <script src="typingAnimation.js">
+      document.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('bg-video');
+      // const placeholder = document.getElementById('video-placeholder');
+
+      // Start loading the video immediately
+      video.load();
+
+      // Function to handle video loaded and playing
+      function videoReady() {
+        // placeholder.classList.add('hidden');
+        // video.classList.remove('hidden');
+        video.removeEventListener('canplay', videoReady);
+      }
+
+      // Check if video is already loaded
+      if (video.readyState >= 3) {
+        videoReady();
+      } else {
+        video.addEventListener('canplay', videoReady);
+      }
+
+      // Error handling
+      video.addEventListener('error', (e) => {
+        console.error('Error loading video:', e);
+        // Keep placeholder visible if video fails to load
+      });
+    });
+    </script>
 </body>
 </html>
