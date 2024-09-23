@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- <link rel="preload" as="video" href="videos/CAR_vid_compressed.mp4" type="video/mp4"> -->
+    <link rel="preload" as="video" href="videos/CAR_video.mp4" type="video/mp4">
 </head>
 <body>
     <!-- Landing Section with Video Background -->
     <section class="landing">
         <!-- Background Video -->
         <video autoplay loop muted reload="auto" id="bg-video">
-            <source src="videos/CAR_vid.mp4" type="video/mp4">
+            <source src="videos/CAR_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
@@ -221,33 +221,50 @@
     </section>
 
     <script src="typingAnimation.js">
-      /*document.addEventListener('DOMContentLoaded', () => {
       const video = document.getElementById('bg-video');
       // const placeholder = document.getElementById('video-placeholder');
+      const videoSrc = video.querySelector('source').src;
 
-      // Start loading the video immediately
-      video.load();
+      // Function to hide placeholder and show video
+      // function showVideo() {
+      //   placeholder.classList.add('hidden');
+      //   video.classList.remove('hidden');
+      // }
 
       // Function to handle video loaded and playing
       function videoReady() {
-        // placeholder.classList.add('hidden');
-        // video.classList.remove('hidden');
-        video.removeEventListener('canplay', videoReady);
+        if (video.readyState >= 3) {
+          // showVideo();
+          video.play().catch(error => console.error('Error playing video:', error));
+        }
       }
 
-      // Check if video is already loaded
-      if (video.readyState >= 3) {
-        videoReady();
-      } else {
-        video.addEventListener('canplay', videoReady);
-      }
+      // Preload video using fetch API
+      fetch(videoSrc)
+        .then(response => response.blob())
+        .then(blob => {
+          const videoUrl = URL.createObjectURL(blob);
+          video.src = videoUrl;
+          video.load();
+          videoReady();
+        })
+        .catch(error => {
+          console.error('Error fetching video:', error);
+          // Fallback to normal video loading
+          video.load();
+        });
 
-      // Error handling
+      // Event listeners for video
+      video.addEventListener('canplay', videoReady);
       video.addEventListener('error', (e) => {
         console.error('Error loading video:', e);
         // Keep placeholder visible if video fails to load
       });
-    });*/
+
+      // Fallback for browsers that don't support fetch or blob URLs
+      if (!window.fetch || !window.URL) {
+        video.load();
+      }
     </script>
 </body>
 </html>
