@@ -464,6 +464,23 @@ body {
   }
 }
 
+@media (min-width: 2028px) {
+  .about-me-extra-photo {
+    width: 150px;
+    height: 180px;
+  }
+  
+  .about-me-extra-photo-horizontal {
+    width: 270px;
+    height: 180px;
+  }
+
+  .about-me-photo {
+    width: 200px;
+    height: 225px;
+  }
+}
+
 @media (max-width: 1024px) {
   .about-me-extra-photo {
     width: 80px;
