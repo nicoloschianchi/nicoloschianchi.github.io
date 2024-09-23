@@ -130,6 +130,73 @@ body {
   background-clip: text;
 }
 
+@media (max-width: 768px) {
+  #typing-text {
+    font-size: 2.5rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .overlay {
+    padding-top: 6rem;
+    padding-left: 30px;
+  }
+  
+  .overlay h1 {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+    margin-left: 2rem;
+  }
+  
+  .overlay p {
+    font-size: 0.9rem;
+    margin-left: 2rem;
+  }
+
+  .links {
+    margin-top: 0.6rem;
+    margin-left: 2rem;
+  }
+  
+  .links a {
+    font-size: 1rem;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 512px) {
+  #typing-text {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .overlay {
+    padding-top: 4.5rem;
+    padding-left: 20px;
+  }
+  
+  .overlay h1 {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    margin-left: 2rem;
+  }
+  
+  .overlay p {
+    font-size: 0.75rem;
+    margin-left: 2rem;
+  }
+
+  .links {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+  
+  .links a {
+    font-size: 0.8rem;
+    margin-right: 6px;
+  }
+}
+
+
 /* Experience Section Styles */
 .experience-bento {
   padding: 80px 20px;
@@ -267,7 +334,6 @@ body {
   border-radius: 1%;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .bento-content {
     flex-direction: column;
@@ -281,10 +347,7 @@ body {
   .bullet-points li {
     margin-left: 25px;
   }
-}
 
-/* Responsive design */
-@media (max-width: 768px) {
   .bento-header {
     flex-direction: column;
     align-items: center;
@@ -340,22 +403,110 @@ body {
 
 .about-me-photo {
   width: 150px;
-  height: 150px;
+  height: 175px;
   object-position: top;
-  border-radius: 50%;
-  margin-right: 20px;
-  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  border-radius: 0%;
+  margin: 0px 40px;
+  object-fit: cover;
   max-width: 100%;
 }
 
 .about-me-text {
   flex: 1;
   text-align: left;
+  padding: 0px 20px;
+  min-width: 300px;
 }
 
 .about-me p {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+
+.about-me-extra-photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 40px;
+  width: 100%;
+}
+
+.about-me-extra-photo,
+.about-me-extra-photo-horizontal {
+  object-position: top;
+  border-radius: 0%;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.about-me-extra-photo {
+  width: 100px;
+  height: 120px;
+}
+
+.about-me-extra-photo-horizontal {
+  width: 180px;
+  height: 120px;
+}
+
+@media (min-width: 851px) {
+  .about-me-photos {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-me-extra-photo {
+    width: 80px;
+    height: 100px;
+  }
+  
+  .about-me-extra-photo-horizontal {
+    width: 160px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 850px) {
+  .about-me-content {
+    flex-direction: column;
+  }
+
+  .about-me-photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    order: 1;
+  }
+
+  .about-me-photo {
+    width: 120px;
+    height: 140px;
+    margin: 0;
+  }
+
+  .about-me-text {
+    order: 2;
+    padding: 20px 0;
+  }
+
+  .about-me-extra-photos-container {
+    order: 3;
+    padding: 20px 0;
+  }
+
+  .about-me-extra-photo,
+  .about-me-extra-photo-horizontal {
+    width: calc(33.333% - 10px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .about-me-content > .about-me-photo {
+    display: none;
+  }
 }
 
 /* Reset default margin and padding for all elements */
