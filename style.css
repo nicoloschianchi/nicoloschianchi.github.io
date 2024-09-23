@@ -466,18 +466,22 @@ body {
 
 @media (min-width: 2028px) {
   .about-me-extra-photo {
-    width: 150px;
-    height: 180px;
+    width: 200px;
+    height: 230px;
   }
   
   .about-me-extra-photo-horizontal {
-    width: 270px;
-    height: 180px;
+    width: 320px;
+    height: 230px;
   }
 
   .about-me-photo {
     width: 200px;
     height: 225px;
+  }
+
+  .about-me-extra-photos-container {
+    gap: 25px;
   }
 }
 
