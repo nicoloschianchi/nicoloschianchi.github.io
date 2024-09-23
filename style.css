@@ -302,7 +302,7 @@ body {
 
 .bullet-points {
   flex: 1;
-  min-width: 400px;
+  min-width: 300px;
   list-style-type: none;
   padding: 0;
 }
@@ -325,7 +325,7 @@ body {
 
 .bento-video {
   flex: 1;
-  min-width: 400px;
+  min-width: 300px;
   padding-right: 20px;
 }
 
