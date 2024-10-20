@@ -323,13 +323,22 @@ body {
   color: #0077b5;
 }
 
-.bento-video {
+.bento-media {
   flex: 1;
   min-width: 200px;
   padding-right: 20px;
 }
 
-.bento-video video {
+.bento-media video {
+  width: 100%;
+  max-width: 768;
+  height: auto;
+  border-radius: 1%;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bento-media img {
   width: 100%;
   max-width: 768;
   height: auto;
@@ -376,11 +385,11 @@ body {
   }
 }
 
-.video-title {
+.media-title {
   font-size: 0.7rem;
 }
 
-.video-subtitle {
+.media-subtitle {
   font-size: 0.6rem;
 }
 
