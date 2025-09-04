@@ -291,7 +291,7 @@ body {
 }
 
 .bento-item:hover .bento-expand {
-  max-height: 800px;
+  max-height: 1800px;
 }
 
 .bento-content {
@@ -346,6 +346,44 @@ body {
   user-select: none;
   pointer-events: none;
 }
+
+.vertical-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the image and caption */
+  max-width: 300px;    /* Limit horizontal size to match vertical image */
+  margin: 0 auto;      /* Center the container itself */
+}
+
+.vertical-img {
+  max-height: 300px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+
+.role-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #0077b5;
+  margin: 0;
+}
+
+.role-dates {
+  font-size: 0.95rem;
+  color: #666;
+  white-space: nowrap;
+}
+
 
 @media (max-width: 768px) {
   .bento-content {
