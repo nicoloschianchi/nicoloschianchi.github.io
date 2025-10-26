@@ -77,9 +77,10 @@
                 <span class="role-dates">April 2025 - Present</span>
               </div>
               <ul class="bullet-points">
-                <li>Leading a 12-person motion planning team developing a C++ and ROS 2-based autonomy stack for a full-scale Indy Autonomous Challenge race car</li>
-                <li>Spearheading the transition from search-based to optimization-based planning algorithms to generate safer, faster, and more efficient trajectories</li>
-                <li>Driving weekly stand-ups, ensuring alignment across planning, perception, and controls subteams</li>
+                <li>Direct 12-person team developing C++ motion planning stack to generate safe and optimal trajectories for full-scale IndyCar autonomous racing.</li>
+                <li>Lead transition from search-based to sampling-based planner by implementing Model Predictive Path Integral Control (MPPI), increasing fastest overtake by 15 MPH around Indianapolis Motor Speedway.</li>
+                <li>Oversee implementation of gear shift planner to maximize available torque using dynamic programming, providing technical direction and review, resulting in a 4% average increase in acceleration out of turns.</li>
+                <li>Construct test suite to extract quantifiable planner performance metrics by integrating with in-house simulator, ensuring stack-wide consistent and iterative progress.</li>
               </ul>
             </div>
             <div class="bento-content">
@@ -88,12 +89,10 @@
                 <span class="role-dates">Mar 2024 - April 2025</span>
               </div>
               <ul class="bullet-points">
-                <li>Engineered perception and motion planning software for Indy Autonomous Challenge, achieving stable localization at 184.6 mph</li>
-                <li>Set world record for fastest autonomous lap around Indianapolis Motor Speedway</li>
-                <li>Developed C++ clustering algorithm for 4D RaDAR data obtaining consistent detections within 130 meters of ego vehicle at 20 Hz with &lt0.5m of lateral error</li>
-                <li>Tuned sensor fusion pipeline feeding into extended Kalman filter for stable opponent tracking at 100 Hz</li>
-                <li>Collaborated to develop race scenarios for closed-loop testing of C++ spatiotemporal graph motion planner</li>
-                <li>Developed a acceleration profiling tool to compare planned vs. actual vehicle accelerations, enabling fine-tuning of motion planning and controls</li>
+                <li>Integrated SLAM measurements into EKF-based localization stack for GPS-denied areas by programming update re-processing for up to 0.1 second time-offset data, maintaining stable tracking tested up to 85 MPH.</li>
+                <li>Developed full clustering-based radar point cloud perception pipeline, achieving &lt0.5 m average lateral error at up to 130 m.</li>
+                <li>Tuned radar, LiDAR, and camera detection fusion into EKF, enabling stable 100 Hz opponent tracking at 120 MPH.</li>
+                <li>Built acceleration profiling tool to analyze longitudinal and lateral accelerations outputted by motion-planner and MPC controller compared to actual accelerations experienced, allowing for fine-tuning of motion planning and controls stacks.</li>
               </ul>
               <div class="bento-media">
                 <video autoplay loop muted>
@@ -132,9 +131,9 @@
             <div class="bento-expand">
               <div class="bento-content">
                 <ul class="bullet-points">
-                  <li>Implemented a ROS 2-based, end-to-end autonomy stack for the Clearpath Jackal, integrating SLAM, perception, planning, and control into a modular research platform</li>
-                  <li>Exploring transformer-based MPC to enhance neural controllers' safety, responsiveness, and deployability on real-world robots</li>
-                  <li>Co-developed SLAM and LiDAR-based perception modules to compete in the 2025 BARN Challenge, securing 3rd place overall</li>
+                  <li>Lead research on deploying diffusion models for multi-robot motion planning on real robotic platforms by reducing inference latency via spline based trajectory representations and latent-space denoising, enabling real-time planning with consistent obstacle avoidance.</li>
+                  <li>Implement full autonomy stack in ROS 2 using Python for the Clearpath Jackal, developing SLAM, perception, planning, and control modules via modular APIs designed to support additional platforms and future research on real robots.</li>
+                  <li>Create SLAM, perception, and obstacle tracking modules to compete in the 2025 ICRA BARN challenge in co-operation with the UVA AMR lab, finishing in 3rd place overall.</li>
                 </ul>
                 <div class="bento-media vertical-media">
                   <img src="images/Clearpath_Jackal.jpg" alt="Clearpath Jackal" class="vertical-img">
@@ -169,9 +168,9 @@
             <div class="bento-expand">
               <div class="bento-content">
                 <ul class="bullet-points">
-                  <li>Expanded high-speed data bus handling capabilities by parsing live packet streams and recorded PCAP files in C++, enabling better flight test analysis and training engineers on IADS within the Integration Test Facility</li>
-                  <li>Overhauled a power distribution control GUI by building a desktop app using ASP.NET Core and Electron.NET, improving fail-safe connection handling and reducing daily power cycle procedures by 90 seconds</li>
-                  <li>Refactored networking and inter-process communication logic in C++ for real-time simulation systems (Simulink/dSPACE/RTSS), cutting code size by 72% and boosting long-term maintainability.</li>
+                  <li>Developed High-Speed Data Bus (HSDB) handling framework by parsing live packet streams and recorded PCAP files in C++, allowing raw HSDB bytes to be processed into meaningful data.</li>
+                  <li>Overhauled GUI to control Power Distribution Units by creating a desktop app with fail-safe socket connection handling and individual outlet management over UDP, and achieved a 90-second reduction in daily power on and off procedure.</li>
+                  <li>Refactored C++ networking and inter-process communication logic in custom I/O functions for Simulink/dSPACE integration within a real-time simulation system (RTSS), reducing code size by 72% and ensuring long-term maintainability.</li>
                 </ul>
                 <div class="bento-media">
                   <img src="images/HondaJet_Elite_II.jpg" alt="Honda Jet Elite II">
@@ -203,9 +202,9 @@
             <div class="bento-expand">
               <div class="bento-content">
                 <ul class="bullet-points">
-                  <li>Offered one-on-one support during lab and office hours by applying Socratic method to help students learn about C programming, Bash, git, logic gates, registers, and memory management</li>
-                  <li>Raised exam scores of students I worked with by 4% through targeted support on specific learning objectives</li>
-                  <li>Provided mediation between students and professor on platforms like Piazza, Discord, and Jira, ensuring smooth communication despite the 500:1 student-professor ratio</li>
+                  <li>Offered one-on-one support during lab and office hours by applying Socratic method to help students learn about C programming, Bash, git, logic gates, registers, and memory management.</li>
+                  <li>Raised exam scores of students I worked with by 4% through targeted support on specific learning objectives.</li>
+                  <li>Provided mediation between students and professor on platforms like Piazza, Discord, and Jira, ensuring smooth communication despite the 500:1 student-professor ratio.</li>
                 </ul>
               </div>
             </div>
@@ -236,9 +235,8 @@
             <div class="bento-expand">
               <div class="bento-content">
                 <ul class="bullet-points">
-                  <li>Enhanced internal management software using React.JS and Node.JS with a MySQL database, improving operational throughput by 2% through a 5% reduction in user errors</li>
-                  <li>Cooperated and communicated directly with company's software lead and the COO in agile environment for efficient, productive workflow</li>
-                  <li>Expedited billing verification processes by building AI software for intelligent document processing using optical character recognition in TypeScript, reducing billing verification time from 10 to 4 minutes</li>
+                  <li>Enhanced internal management software using React.JS and Node.JS with a MySQL database, improving operational throughput by 2% through a 5% reduction in user errors.</li>
+                  <li>Expedited billing verification processes by building AI software for intelligent document processing using Tesseract.js optical character recognition in TypeScript, decreasing billing verification time from 10 to 4 minute.</li>
                 </ul>
                 <div class="bento-media">
                   <video autoplay loop muted>
@@ -276,9 +274,9 @@
           <div class="bento-expand">
             <div class="bento-content">
               <ul class="bullet-points">
-                <li>Implemented C++ finite state machine acting as battery management system of electric race car, from start-up to shut-off</li>
-                <li>Conducted integration testing of battery management system, ensuring reliability</li>
-                <li>Cooperated to implement car's telemetry system using Protobuf, enabling real-time data visualization in the pits and achieving data transfer speeds of up to 300 Mbps</li>
+                <li>Implemented C++ finite state machine acting as battery management system of electric race car, from start-up to shut-off.</li>
+                <li>Conducted integration testing of battery management system, ensuring reliability.</li>
+                <li>Cooperated to implement car's telemetry system using Protobuf, enabling real-time data visualization in the pits and achieving data transfer speeds of up to 300 Mbps.</li>
               </ul>
               <div class="bento-media">
                 <img src="images/VA_Motorsport_Car.jpg" alt="VA Motorsports Car">
@@ -297,7 +295,7 @@
       <div class="about-me-content">
         <img src="images/Lumatic_Headshot.jpg" alt="Nicolo Schianchi" class="about-me-photo">
         <div class="about-me-text">
-          <p>I'm a computer science student at the University of Virginia with a 4.0 GPA and have an interest for autonomy in robotics. I'm originally from Italy (with both English and Italian as first languages), and I've lived in the Czech Republic, Belgium, Romania, Switzerland, and the US (both in IA and VA). Beyond my passion for robotics and traveling, I love practicing sports like running, skiing, and soccer, and spending time with my family.</p>
+          <p>I'm a computer science student at the University of Virginia with a 4.0 GPA and have an interest for autonomy in robotics. I'm originally from Italy (with both English and Italian as first languages), and I've lived in the Czech Republic, Belgium, Romania, Switzerland, and the US (both in Iowa and Virginia). Beyond my passion for robotics and traveling, I love practicing sports like running, skiing, and soccer, and spending time with my family.</p>
         </div>
         <img src="images/Running3.jpg" alt="Running" class="about-me-photo">
         <div class="about-me-photos">
